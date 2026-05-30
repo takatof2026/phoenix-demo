@@ -15,7 +15,7 @@
     --paper: #f4f0e8;
     --warm: #8B4513;
     --border: #e0d4b8;
-    --gray: #888;
+    --gray: #666;
   }
 
 - { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,8 +33,6 @@ background: linear-gradient(135deg, #1a1208 0%, #2a1f0a 100%);
 border-bottom: 2px solid var(–gold);
 padding: 20px 48px;
 text-align: center;
-position: relative;
-z-index: 200;
 }
 
 .demo-badge {
@@ -58,15 +56,12 @@ font-family: ‘Noto Sans JP’, sans-serif;
 font-weight: 300;
 }
 
-.demo-text strong {
-color: var(–gold);
-font-weight: 600;
-}
+.demo-text strong { color: var(–gold); font-weight: 600; }
 
 .demo-credit {
 margin-top: 10px;
 font-size: 11px;
-color: rgba(201,168,76,0.4);
+color: rgba(201,168,76,0.5);
 letter-spacing: 4px;
 font-family: ‘Cormorant Garamond’, serif;
 font-style: italic;
@@ -77,7 +72,7 @@ header {
 position: sticky;
 top: 0;
 z-index: 100;
-background: rgba(26,18,8,0.95);
+background: rgba(26,18,8,0.96);
 backdrop-filter: blur(12px);
 border-bottom: 1px solid rgba(201,168,76,0.3);
 padding: 0 48px;
@@ -98,7 +93,7 @@ font-weight: 300;
 nav { display: flex; gap: 40px; align-items: center; }
 
 nav a {
-color: rgba(201,168,76,0.7);
+color: rgba(201,168,76,0.8);
 text-decoration: none;
 font-size: 11px;
 letter-spacing: 3px;
@@ -116,12 +111,10 @@ padding: 10px 28px;
 border-radius: 2px;
 font-size: 11px;
 letter-spacing: 3px;
-font-weight: 600;
+font-weight: 700;
 text-decoration: none;
 transition: all 0.3s;
 }
-
-.btn-reserve:hover { background: var(–gold-light); }
 
 /* ===== HERO ===== */
 .hero {
@@ -134,7 +127,7 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
-filter: brightness(0.65);
+filter: brightness(0.55);
 animation: zoomIn 12s ease-out forwards;
 }
 
@@ -146,7 +139,7 @@ to { transform: scale(1.0); }
 .hero-overlay {
 position: absolute;
 inset: 0;
-background: linear-gradient(to bottom, rgba(26,18,8,0.2) 0%, rgba(26,18,8,0.0) 40%, rgba(26,18,8,0.6) 100%);
+background: linear-gradient(to bottom, rgba(26,18,8,0.3) 0%, rgba(26,18,8,0.0) 40%, rgba(26,18,8,0.7) 100%);
 }
 
 .hero-content {
@@ -164,29 +157,29 @@ to { opacity: 1; transform: translateY(0); }
 .hero-sub {
 font-family: ‘Cormorant Garamond’, serif;
 color: var(–gold);
-font-size: 13px;
+font-size: 14px;
 letter-spacing: 8px;
 margin-bottom: 16px;
 font-style: italic;
 }
 
 .hero-title {
-font-family: ‘Noto Serif JP’, serif;
-color: white;
-font-size: 56px;
+color: #ffffff;
+font-size: 64px;
 font-weight: 300;
-letter-spacing: 12px;
+letter-spacing: 14px;
 line-height: 1.2;
 margin-bottom: 24px;
-text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+text-shadow: 0 2px 30px rgba(0,0,0,0.8);
 }
 
 .hero-desc {
-color: rgba(255,255,255,0.8);
-font-size: 14px;
+color: rgba(255,255,255,0.9);
+font-size: 15px;
 letter-spacing: 2px;
 font-weight: 300;
-line-height: 2;
+line-height: 2.2;
+text-shadow: 0 1px 8px rgba(0,0,0,0.6);
 }
 
 .hero-scroll {
@@ -198,7 +191,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap: 8px;
-color: rgba(201,168,76,0.6);
+color: rgba(255,255,255,0.7);
 font-size: 9px;
 letter-spacing: 4px;
 }
@@ -206,7 +199,7 @@ letter-spacing: 4px;
 .scroll-line {
 width: 1px;
 height: 50px;
-background: linear-gradient(to bottom, rgba(201,168,76,0.6), transparent);
+background: linear-gradient(to bottom, rgba(255,255,255,0.7), transparent);
 animation: scrollAnim 2s ease-in-out infinite;
 }
 
@@ -220,48 +213,49 @@ animation: scrollAnim 2s ease-in-out infinite;
 background: var(–ink);
 border-top: 2px solid var(–gold);
 border-bottom: 2px solid var(–gold);
-padding: 28px 80px;
+padding: 32px 80px;
 display: flex;
 align-items: center;
 justify-content: center;
-gap: 40px;
+gap: 48px;
 }
 
-.qr-emoji { font-size: 32px; }
+.qr-emoji { font-size: 36px; }
 
 .qr-text {
-color: var(–gold-light);
-font-size: 13px;
+color: #ffffff;
+font-size: 14px;
 letter-spacing: 2px;
-line-height: 1.8;
+line-height: 2;
 font-family: ‘Noto Sans JP’, sans-serif;
 font-weight: 300;
 }
 
-.qr-text strong { color: var(–gold); font-weight: 600; }
+.qr-text strong { color: var(–gold); font-weight: 700; font-size: 16px; }
 
 .btn-qr {
 background: transparent;
 border: 1px solid var(–gold);
 color: var(–gold);
-padding: 12px 32px;
-font-size: 11px;
+padding: 14px 36px;
+font-size: 12px;
 letter-spacing: 3px;
 cursor: pointer;
 font-family: ‘Noto Sans JP’, sans-serif;
 transition: all 0.3s;
 white-space: nowrap;
+font-weight: 400;
 }
 
 .btn-qr:hover { background: var(–gold); color: var(–ink); }
 
-/* ===== SECTION COMMON ===== */
+/* ===== SECTION ===== */
 section { padding: 100px 80px; }
 
 .section-label {
 font-family: ‘Cormorant Garamond’, serif;
 color: var(–gold);
-font-size: 11px;
+font-size: 12px;
 letter-spacing: 8px;
 margin-bottom: 12px;
 display: flex;
@@ -279,7 +273,6 @@ opacity: 0.4;
 }
 
 .section-title {
-font-family: ‘Noto Serif JP’, serif;
 font-size: 32px;
 font-weight: 300;
 letter-spacing: 6px;
@@ -290,113 +283,91 @@ margin-bottom: 48px;
 /* ===== ROOMS ===== */
 .rooms { background: var(–paper); }
 
-.rooms-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 2px;
-}
+.rooms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
 
 .room-card { position: relative; overflow: hidden; cursor: pointer; }
 
 .room-card img {
-width: 100%;
-height: 380px;
-object-fit: cover;
-transition: transform 0.6s ease;
-filter: brightness(0.75);
+width: 100%; height: 380px; object-fit: cover;
+transition: transform 0.6s; filter: brightness(0.65);
 }
 
-.room-card:hover img { transform: scale(1.04); filter: brightness(0.6); }
+.room-card:hover img { transform: scale(1.04); filter: brightness(0.5); }
 
 .room-info {
-position: absolute;
-bottom: 0; left: 0; right: 0;
+position: absolute; bottom: 0; left: 0; right: 0;
 padding: 32px;
-background: linear-gradient(to top, rgba(26,18,8,0.9), transparent);
+background: linear-gradient(to top, rgba(10,8,4,0.95) 0%, rgba(10,8,4,0.6) 60%, transparent 100%);
 }
 
 .room-type {
-font-size: 10px;
-letter-spacing: 4px;
-color: var(–gold);
-margin-bottom: 8px;
-font-family: ‘Cormorant Garamond’, serif;
-font-style: italic;
+font-size: 10px; letter-spacing: 4px; color: var(–gold);
+margin-bottom: 8px; font-family: ‘Cormorant Garamond’, serif; font-style: italic;
 }
 
-.room-name { font-size: 22px; color: white; letter-spacing: 4px; font-weight: 300; margin-bottom: 8px; }
-.room-price { font-size: 13px; color: var(–gold-light); letter-spacing: 2px; }
+.room-name { font-size: 22px; color: #ffffff; letter-spacing: 4px; font-weight: 300; margin-bottom: 8px; }
+.room-price { font-size: 14px; color: var(–gold-light); letter-spacing: 2px; font-weight: 300; }
 
 .room-tag {
-position: absolute;
-top: 20px; right: 20px;
-background: var(–gold);
-color: var(–ink);
-font-size: 10px;
-letter-spacing: 2px;
-padding: 4px 12px;
-font-weight: 600;
+position: absolute; top: 20px; right: 20px;
+background: var(–gold); color: var(–ink);
+font-size: 10px; letter-spacing: 2px; padding: 4px 14px; font-weight: 700;
 }
 
 /* ===== FOOD ===== */
 .food { background: var(–cream); }
-
 .food-layout { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
 
 .food-card { position: relative; overflow: hidden; border-radius: 2px; }
 
 .food-card img {
-width: 100%; height: 260px; object-fit: cover;
-transition: transform 0.5s; filter: brightness(0.85);
+width: 100%; height: 280px; object-fit: cover;
+transition: transform 0.5s; filter: brightness(0.7);
 }
 
-.food-card:hover img { transform: scale(1.06); filter: brightness(0.7); }
+.food-card:hover img { transform: scale(1.06); filter: brightness(0.55); }
 
 .food-label {
-position: absolute;
-bottom: 0; left: 0; right: 0;
-padding: 20px;
-background: linear-gradient(to top, rgba(26,18,8,0.85), transparent);
-color: white; font-size: 14px; letter-spacing: 3px; font-weight: 300;
+position: absolute; bottom: 0; left: 0; right: 0; padding: 24px;
+background: linear-gradient(to top, rgba(10,8,4,0.95), transparent);
+color: #ffffff; font-size: 16px; letter-spacing: 3px; font-weight: 300;
 }
 
-.food-price { font-size: 11px; color: var(–gold); letter-spacing: 2px; margin-top: 4px; }
+.food-price { font-size: 12px; color: var(–gold); letter-spacing: 2px; margin-top: 6px; }
 
 /* ===== BLOG ===== */
 .blog { background: var(–ink); }
-.blog .section-title { color: var(–gold-light); }
+.blog .section-title { color: #ffffff; }
 
 .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
 .blog-card {
-background: rgba(255,255,255,0.04);
-border: 1px solid rgba(201,168,76,0.2);
-border-radius: 2px; overflow: hidden;
-transition: border-color 0.3s; cursor: pointer;
+background: rgba(255,255,255,0.05);
+border: 1px solid rgba(201,168,76,0.25);
+border-radius: 2px; overflow: hidden; transition: border-color 0.3s; cursor: pointer;
 }
 
-.blog-card:hover { border-color: rgba(201,168,76,0.6); }
+.blog-card:hover { border-color: var(–gold); }
 
-.blog-img { width: 100%; height: 200px; object-fit: cover; filter: brightness(0.8); }
+.blog-img { width: 100%; height: 200px; object-fit: cover; filter: brightness(0.75); }
 
 .blog-body { padding: 24px; }
 
-.blog-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.blog-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
 
-.blog-date { font-size: 10px; color: var(–gold); letter-spacing: 2px; font-family: ‘Cormorant Garamond’, serif; }
+.blog-date { font-size: 11px; color: var(–gold); letter-spacing: 2px; font-family: ‘Cormorant Garamond’, serif; }
 
 .blog-cat {
-font-size: 9px; letter-spacing: 2px; color: rgba(201,168,76,0.6);
-border: 1px solid rgba(201,168,76,0.3); padding: 2px 8px;
+font-size: 9px; letter-spacing: 2px; color: rgba(201,168,76,0.7);
+border: 1px solid rgba(201,168,76,0.3); padding: 2px 10px;
 }
 
-.blog-title { color: var(–gold-light); font-size: 15px; letter-spacing: 2px; font-weight: 300; line-height: 1.7; margin-bottom: 12px; }
+.blog-title { color: #ffffff; font-size: 15px; letter-spacing: 2px; font-weight: 300; line-height: 1.8; margin-bottom: 12px; }
 
-.blog-text { color: rgba(232,213,163,0.5); font-size: 12px; line-height: 1.8; font-family: ‘Noto Sans JP’, sans-serif; font-weight: 300; }
+.blog-text { color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.9; font-family: ‘Noto Sans JP’, sans-serif; font-weight: 300; }
 
 /* ===== REVIEWS ===== */
 .reviews { background: var(–paper); }
-
 .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
 .review-card {
@@ -404,10 +375,11 @@ background: white; border: 1px solid var(–border);
 border-radius: 2px; padding: 28px; cursor: pointer; transition: all 0.3s;
 }
 
-.review-card:hover { border-color: var(–gold); box-shadow: 0 4px 24px rgba(201,168,76,0.12); }
+.review-card:hover { border-color: var(–gold); box-shadow: 0 4px 24px rgba(201,168,76,0.15); }
 
-.review-stars { color: var(–gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
-.review-text { font-size: 13px; line-height: 1.9; color: var(–ink); margin-bottom: 16px; font-weight: 300; }
+.review-stars { color: var(–gold); font-size: 16px; letter-spacing: 3px; margin-bottom: 14px; }
+
+.review-text { font-size: 14px; line-height: 2; color: #333; margin-bottom: 16px; font-weight: 300; }
 
 .review-photos { display: flex; gap: 8px; margin-bottom: 16px; }
 
@@ -418,85 +390,94 @@ display: flex; align-items: center; justify-content: space-between;
 padding-top: 14px; border-top: 1px solid var(–border);
 }
 
-.reviewer { font-size: 11px; color: var(–gray); letter-spacing: 2px; }
-.review-date { font-size: 10px; color: var(–gold); letter-spacing: 2px; font-family: ‘Cormorant Garamond’, serif; }
+.reviewer { font-size: 12px; color: #555; letter-spacing: 2px; }
+.review-date { font-size: 11px; color: var(–gold); letter-spacing: 2px; font-family: ‘Cormorant Garamond’, serif; }
 
 .owner-reply {
-background: rgba(201,168,76,0.06); border-left: 2px solid var(–gold);
-padding: 12px 16px; margin-top: 12px; border-radius: 0 2px 2px 0;
+background: rgba(201,168,76,0.07); border-left: 2px solid var(–gold);
+padding: 12px 16px; margin-top: 14px; border-radius: 0 2px 2px 0;
 }
 
 .owner-reply-label { font-size: 9px; letter-spacing: 3px; color: var(–gold); margin-bottom: 6px; font-family: ‘Cormorant Garamond’, serif; }
-.owner-reply-text { font-size: 12px; color: var(–warm); line-height: 1.7; font-weight: 300; }
+.owner-reply-text { font-size: 13px; color: #555; line-height: 1.8; font-weight: 300; }
 
 /* ===== SMART KEY ===== */
 .smartkey {
-background: var(–ink); padding: 80px;
+background: #0f0c06; padding: 80px;
 display: flex; align-items: center; gap: 80px;
-border-top: 1px solid rgba(201,168,76,0.2);
-border-bottom: 1px solid rgba(201,168,76,0.2);
+border-top: 1px solid rgba(201,168,76,0.3);
+border-bottom: 1px solid rgba(201,168,76,0.3);
 }
 
-.smartkey-icon { font-size: 72px; flex-shrink: 0; filter: drop-shadow(0 0 20px rgba(201,168,76,0.4)); }
+.smartkey-icon { font-size: 72px; flex-shrink: 0; }
 
-.smartkey-title { font-family: ‘Cormorant Garamond’, serif; color: var(–gold); font-size: 32px; letter-spacing: 4px; margin-bottom: 16px; font-style: italic; }
+.smartkey-title {
+font-family: ‘Cormorant Garamond’, serif;
+color: var(–gold); font-size: 34px; letter-spacing: 4px; margin-bottom: 20px; font-style: italic;
+}
 
-.smartkey-text { color: rgba(232,213,163,0.7); font-size: 14px; line-height: 2; letter-spacing: 1px; font-family: ‘Noto Sans JP’, sans-serif; font-weight: 300; }
+.smartkey-text { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 2.2; letter-spacing: 1px; font-family: ‘Noto Sans JP’, sans-serif; font-weight: 300; }
 
 /* ===== ACCESS ===== */
 .access { background: var(–cream); }
-
 .access-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 
 .access-map { width: 100%; height: 320px; position: relative; overflow: hidden; border-radius: 2px; }
-.access-map img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8) sepia(0.3); }
-.access-map-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(26,18,8,0.3); }
-.map-pin { font-size: 36px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5)); }
+.access-map img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.75) sepia(0.2); }
+.access-map-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(26,18,8,0.25); }
+.map-pin { font-size: 40px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6)); }
 
-.access-item { display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(–border); align-items: flex-start; }
-.access-label { font-size: 10px; letter-spacing: 3px; color: var(–gold); min-width: 80px; padding-top: 2px; font-family: ‘Cormorant Garamond’, serif; }
-.access-value { font-size: 13px; color: var(–ink); line-height: 1.8; letter-spacing: 1px; font-weight: 300; }
+.access-item { display: flex; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(–border); }
+.access-label { font-size: 11px; letter-spacing: 3px; color: var(–gold); min-width: 80px; padding-top: 2px; font-family: ‘Cormorant Garamond’, serif; }
+.access-value { font-size: 14px; color: #333; line-height: 1.9; letter-spacing: 1px; font-weight: 300; }
 
 /* ===== FOOTER ===== */
 footer { background: var(–ink); padding: 60px 80px 40px; border-top: 2px solid rgba(201,168,76,0.3); }
 
-.footer-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(201,168,76,0.15); }
+.footer-top {
+display: flex; justify-content: space-between; align-items: flex-start;
+margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(201,168,76,0.15);
+}
 
-.footer-logo { font-family: ‘Cormorant Garamond’, serif; color: var(–gold); font-size: 28px; letter-spacing: 8px; font-weight: 300; margin-bottom: 12px; }
+.footer-logo { font-family: ‘Cormorant Garamond’, serif; color: var(–gold); font-size: 28px; letter-spacing: 8px; font-weight: 300; margin-bottom: 14px; }
 
-.footer-address { color: rgba(201,168,76,0.4); font-size: 11px; letter-spacing: 2px; line-height: 2; font-family: ‘Noto Sans JP’, sans-serif; font-weight: 300; }
+.footer-address { color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing: 2px; line-height: 2.2; font-family: ‘Noto Sans JP’, sans-serif; font-weight: 300; }
 
-.footer-links { display: flex; gap: 40px; }
+.footer-links { display: flex; gap: 48px; }
 
-.footer-col-title { color: var(–gold); font-size: 10px; letter-spacing: 4px; margin-bottom: 16px; font-family: ‘Cormorant Garamond’, serif; }
+.footer-col-title { color: var(–gold); font-size: 10px; letter-spacing: 4px; margin-bottom: 18px; font-family: ‘Cormorant Garamond’, serif; }
 
-.footer-col a { display: block; color: rgba(201,168,76,0.4); font-size: 11px; letter-spacing: 2px; text-decoration: none; margin-bottom: 10px; font-family: ‘Noto Sans JP’, sans-serif; font-weight: 300; transition: color 0.3s; }
+.footer-col a {
+display: block; color: rgba(255,255,255,0.4); font-size: 12px; letter-spacing: 2px;
+text-decoration: none; margin-bottom: 12px; font-family: ‘Noto Sans JP’, sans-serif;
+font-weight: 300; transition: color 0.3s;
+}
 
 .footer-col a:hover { color: var(–gold); }
 
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; }
 
-.copyright { color: rgba(201,168,76,0.25); font-size: 10px; letter-spacing: 2px; font-family: ‘Cormorant Garamond’, serif; }
+.copyright { color: rgba(255,255,255,0.2); font-size: 11px; letter-spacing: 2px; font-family: ‘Cormorant Garamond’, serif; }
 
-.powered { color: rgba(201,168,76,0.2); font-size: 9px; letter-spacing: 3px; font-family: ‘Cormorant Garamond’, serif; font-style: italic; }
+.powered { color: rgba(201,168,76,0.25); font-size: 10px; letter-spacing: 3px; font-family: ‘Cormorant Garamond’, serif; font-style: italic; }
 
 /* ===== FLOAT ===== */
 .float-reserve {
 position: fixed; bottom: 32px; right: 32px;
 background: var(–gold); color: var(–ink);
-padding: 16px 32px; font-size: 12px; letter-spacing: 3px; font-weight: 600;
+padding: 16px 36px; font-size: 13px; letter-spacing: 3px; font-weight: 700;
 border-radius: 2px; cursor: pointer;
-box-shadow: 0 8px 32px rgba(201,168,76,0.4); z-index: 99;
+box-shadow: 0 8px 32px rgba(201,168,76,0.5); z-index: 99;
 font-family: ‘Noto Sans JP’, sans-serif; transition: all 0.3s;
 animation: pulse 3s ease-in-out infinite;
 }
 
 @keyframes pulse {
 0%, 100% { box-shadow: 0 8px 32px rgba(201,168,76,0.4); }
-50% { box-shadow: 0 8px 48px rgba(201,168,76,0.7); }
+50% { box-shadow: 0 8px 48px rgba(201,168,76,0.8); }
 }
 
-.divider { height: 1px; background: linear-gradient(to right, transparent, var(–gold), transparent); opacity: 0.3; margin: 0 80px; }
+.divider { height: 1px; background: linear-gradient(to right, transparent, var(–gold), transparent); opacity: 0.25; margin: 0 80px; }
 </style>
 
 </head>
@@ -528,10 +509,12 @@ animation: pulse 3s ease-in-out infinite;
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- HERO スキー場の雪山 -->
 
 <section class="hero">
-  <img class="hero-img" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&q=80" alt="外観">
+  <img class="hero-img"
+    src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1600&q=80"
+    alt="川場スキー場">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="hero-sub">Kawaba Village, Gunma</p>
@@ -561,8 +544,9 @@ animation: pulse 3s ease-in-out infinite;
   <div class="section-label">ROOMS</div>
   <h2 class="section-title">お部屋のご案内</h2>
   <div class="rooms-grid">
+    <!-- 雪山の宿・室内 -->
     <div class="room-card">
-      <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80" alt="和室">
+      <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="和室">
       <div class="room-tag">和室</div>
       <div class="room-info">
         <div class="room-type">Japanese Style</div>
@@ -571,7 +555,7 @@ animation: pulse 3s ease-in-out infinite;
       </div>
     </div>
     <div class="room-card">
-      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="洋室">
+      <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="洋室">
       <div class="room-tag">洋室</div>
       <div class="room-info">
         <div class="room-type">Western Style</div>
@@ -580,7 +564,7 @@ animation: pulse 3s ease-in-out infinite;
       </div>
     </div>
     <div class="room-card">
-      <img src="https://images.unsplash.com/photo-1586611292717-f828b167408c?w=800&q=80" alt="洋室">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80" alt="ツイン">
       <div class="room-info">
         <div class="room-type">Standard Twin</div>
         <div class="room-name">202号室</div>
@@ -588,7 +572,7 @@ animation: pulse 3s ease-in-out infinite;
       </div>
     </div>
     <div class="room-card">
-      <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80" alt="特別室">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="特別室">
       <div class="room-tag" style="background:var(--warm);color:white;">特別室</div>
       <div class="room-info">
         <div class="room-type">Special Suite</div>
@@ -616,7 +600,7 @@ animation: pulse 3s ease-in-out infinite;
       <div class="food-label">夜御飯<div class="food-price">¥3,500 / 名　19時スタート</div></div>
     </div>
     <div class="food-card">
-      <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=600&q=80" alt="弁当">
+      <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=600&q=80" alt="弁当">
       <div class="food-label">弁当<div class="food-price">¥2,000 / 名　夜8時以降</div></div>
     </div>
   </div>
@@ -631,11 +615,11 @@ animation: pulse 3s ease-in-out infinite;
   <h2 class="section-title">お知らせ・ブログ</h2>
   <div class="blog-grid">
     <div class="blog-card">
-      <img class="blog-img" src="https://images.unsplash.com/photo-1418985991508-e47386d96a71?w=600&q=80" alt="雪">
+      <img class="blog-img" src="https://images.unsplash.com/photo-1548777123-e216912df7d8?w=600&q=80" alt="スキー">
       <div class="blog-body">
         <div class="blog-meta"><span class="blog-date">2026.05.28</span><span class="blog-cat">お知らせ</span></div>
         <div class="blog-title">今週末、ゲレンデは最高のコンディションです！</div>
-        <div class="blog-text">積雪150cm超え。視界良好、全コースオープン中。</div>
+        <div class="blog-text">積雪150cm超え。視界良好、全コースオープン中。ぜひこの週末にお越しください。</div>
       </div>
     </div>
     <div class="blog-card">
@@ -647,11 +631,11 @@ animation: pulse 3s ease-in-out infinite;
       </div>
     </div>
     <div class="blog-card">
-      <img class="blog-img" src="https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80" alt="スキー">
+      <img class="blog-img" src="https://images.unsplash.com/photo-1452573992436-6d508f200b30?w=600&q=80" alt="スキー場">
       <div class="blog-body">
         <div class="blog-meta"><span class="blog-date">2026.05.10</span><span class="blog-cat">ブログ</span></div>
         <div class="blog-title">当日予約、はじめました。スキー場からそのまま泊まれます。</div>
-        <div class="blog-text">QRコードをスキャンするだけ。フロント手続き不要。</div>
+        <div class="blog-text">QRコードをスキャンするだけ。フロント手続き不要でお部屋へ。</div>
       </div>
     </div>
   </div>
@@ -669,7 +653,7 @@ animation: pulse 3s ease-in-out infinite;
       <div class="review-stars">★★★★★</div>
       <div class="review-text">スキーで疲れた体に、温かい夜御飯が最高でした。また来ます！</div>
       <div class="review-photos">
-        <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=200&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1548777123-e216912df7d8?w=200&q=80" alt="">
         <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&q=80" alt="">
       </div>
       <div class="owner-reply">
@@ -685,7 +669,7 @@ animation: pulse 3s ease-in-out infinite;
       <div class="review-stars">★★★★★</div>
       <div class="review-text">当日予約でQRから予約して入室まで全部スマホで完結。感動しました。</div>
       <div class="review-photos">
-        <img src="https://images.unsplash.com/photo-1418985991508-e47386d96a71?w=200&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1452573992436-6d508f200b30?w=200&q=80" alt="">
       </div>
       <div class="owner-reply">
         <div class="owner-reply-label">OWNER REPLY</div>
@@ -701,8 +685,8 @@ animation: pulse 3s ease-in-out infinite;
       <div class="review-text">和室が広くて清潔。朝食が絶品でした。子どもも大喜び。</div>
       <div class="review-photos">
         <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=200&q=80" alt="">
-        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=200&q=80" alt="">
-        <img src="https://images.unsplash.com/photo-1586611292717-f828b167408c?w=200&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=200&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=200&q=80" alt="">
       </div>
       <div class="owner-reply">
         <div class="owner-reply-label">OWNER REPLY</div>
@@ -737,7 +721,7 @@ animation: pulse 3s ease-in-out infinite;
   <h2 class="section-title">アクセス</h2>
   <div class="access-grid">
     <div class="access-map">
-      <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80" alt="地図">
+      <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800&q=80" alt="川場村">
       <div class="access-map-overlay"><div class="map-pin">📍</div></div>
     </div>
     <div>
