@@ -30,15 +30,15 @@ overflow-x: hidden;
 /* ===== DEMO BANNER ===== */
 .demo-banner {
 background: linear-gradient(135deg, #1a1208 0%, #2a1f0a 100%);
-border-bottom: 2px solid var(–gold);
+border-bottom: 2px solid #C9A84C;
 padding: 20px 48px;
 text-align: center;
 }
 
 .demo-badge {
 display: inline-block;
-background: var(–gold);
-color: var(–ink);
+background: #C9A84C;
+color: #1a1208;
 font-size: 10px;
 letter-spacing: 4px;
 padding: 4px 16px;
@@ -47,8 +47,9 @@ margin-bottom: 12px;
 font-family: ‘Cormorant Garamond’, serif;
 }
 
+/* 修正: CSS変数に依存せず明示的な色指定 */
 .demo-text {
-color: var(–gold-light);
+color: #e8d5a0;
 font-size: 14px;
 letter-spacing: 2px;
 line-height: 1.9;
@@ -56,7 +57,7 @@ font-family: ‘Noto Sans JP’, sans-serif;
 font-weight: 300;
 }
 
-.demo-text strong { color: var(–gold); font-weight: 600; }
+.demo-text strong { color: #C9A84C; font-weight: 600; }
 
 .demo-credit {
 margin-top: 10px;
@@ -84,7 +85,7 @@ height: 64px;
 
 .logo {
 font-family: ‘Cormorant Garamond’, serif;
-color: var(–gold);
+color: #C9A84C;
 font-size: 22px;
 letter-spacing: 6px;
 font-weight: 300;
@@ -102,11 +103,11 @@ font-weight: 300;
 transition: color 0.3s;
 }
 
-nav a:hover { color: var(–gold); }
+nav a:hover { color: #C9A84C; }
 
 .btn-reserve {
-background: var(–gold);
-color: var(–ink);
+background: #C9A84C;
+color: #1a1208;
 padding: 10px 28px;
 border-radius: 2px;
 font-size: 11px;
@@ -117,16 +118,10 @@ transition: all 0.3s;
 }
 
 /* ===== HERO ===== */
-.hero {
-height: 100vh;
-position: relative;
-overflow: hidden;
-}
+.hero { height: 100vh; position: relative; overflow: hidden; }
 
 .hero-img {
-width: 100%;
-height: 100%;
-object-fit: cover;
+width: 100%; height: 100%; object-fit: cover;
 filter: brightness(0.55);
 animation: zoomIn 12s ease-out forwards;
 }
@@ -137,15 +132,12 @@ to { transform: scale(1.0); }
 }
 
 .hero-overlay {
-position: absolute;
-inset: 0;
+position: absolute; inset: 0;
 background: linear-gradient(to bottom, rgba(26,18,8,0.3) 0%, rgba(26,18,8,0.0) 40%, rgba(26,18,8,0.7) 100%);
 }
 
 .hero-content {
-position: absolute;
-bottom: 120px;
-left: 80px;
+position: absolute; bottom: 120px; left: 80px;
 animation: fadeUp 1.2s ease-out 0.5s both;
 }
 
@@ -156,49 +148,30 @@ to { opacity: 1; transform: translateY(0); }
 
 .hero-sub {
 font-family: ‘Cormorant Garamond’, serif;
-color: var(–gold);
-font-size: 14px;
-letter-spacing: 8px;
-margin-bottom: 16px;
-font-style: italic;
+color: #C9A84C; font-size: 14px; letter-spacing: 8px;
+margin-bottom: 16px; font-style: italic;
 }
 
 .hero-title {
-color: #ffffff;
-font-size: 64px;
-font-weight: 300;
-letter-spacing: 14px;
-line-height: 1.2;
-margin-bottom: 24px;
+color: #ffffff; font-size: 64px; font-weight: 300;
+letter-spacing: 14px; line-height: 1.2; margin-bottom: 24px;
 text-shadow: 0 2px 30px rgba(0,0,0,0.8);
 }
 
 .hero-desc {
-color: rgba(255,255,255,0.9);
-font-size: 15px;
-letter-spacing: 2px;
-font-weight: 300;
-line-height: 2.2;
+color: rgba(255,255,255,0.9); font-size: 15px;
+letter-spacing: 2px; font-weight: 300; line-height: 2.2;
 text-shadow: 0 1px 8px rgba(0,0,0,0.6);
 }
 
 .hero-scroll {
-position: absolute;
-bottom: 40px;
-left: 50%;
-transform: translateX(-50%);
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 8px;
-color: rgba(255,255,255,0.7);
-font-size: 9px;
-letter-spacing: 4px;
+position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+display: flex; flex-direction: column; align-items: center; gap: 8px;
+color: rgba(255,255,255,0.7); font-size: 9px; letter-spacing: 4px;
 }
 
 .scroll-line {
-width: 1px;
-height: 50px;
+width: 1px; height: 50px;
 background: linear-gradient(to bottom, rgba(255,255,255,0.7), transparent);
 animation: scrollAnim 2s ease-in-out infinite;
 }
@@ -210,81 +183,53 @@ animation: scrollAnim 2s ease-in-out infinite;
 
 /* ===== QR PROMO ===== */
 .qr-promo {
-background: var(–ink);
-border-top: 2px solid var(–gold);
-border-bottom: 2px solid var(–gold);
+background: #1a1208;
+border-top: 2px solid #C9A84C;
+border-bottom: 2px solid #C9A84C;
 padding: 32px 80px;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 48px;
+display: flex; align-items: center; justify-content: center; gap: 48px;
 }
 
 .qr-emoji { font-size: 36px; }
 
 .qr-text {
-color: #ffffff;
-font-size: 14px;
-letter-spacing: 2px;
-line-height: 2;
-font-family: ‘Noto Sans JP’, sans-serif;
-font-weight: 300;
+color: #ffffff; font-size: 14px; letter-spacing: 2px; line-height: 2;
+font-family: ‘Noto Sans JP’, sans-serif; font-weight: 300;
 }
 
-.qr-text strong { color: var(–gold); font-weight: 700; font-size: 16px; }
+.qr-text strong { color: #C9A84C; font-weight: 700; font-size: 16px; }
 
 .btn-qr {
-background: transparent;
-border: 1px solid var(–gold);
-color: var(–gold);
-padding: 14px 36px;
-font-size: 12px;
-letter-spacing: 3px;
-cursor: pointer;
-font-family: ‘Noto Sans JP’, sans-serif;
-transition: all 0.3s;
-white-space: nowrap;
-font-weight: 400;
+background: transparent; border: 1px solid #C9A84C; color: #C9A84C;
+padding: 14px 36px; font-size: 12px; letter-spacing: 3px; cursor: pointer;
+font-family: ‘Noto Sans JP’, sans-serif; transition: all 0.3s;
+white-space: nowrap; font-weight: 400;
 }
 
-.btn-qr:hover { background: var(–gold); color: var(–ink); }
+.btn-qr:hover { background: #C9A84C; color: #1a1208; }
 
 /* ===== SECTION ===== */
 section { padding: 100px 80px; }
 
 .section-label {
 font-family: ‘Cormorant Garamond’, serif;
-color: var(–gold);
-font-size: 12px;
-letter-spacing: 8px;
-margin-bottom: 12px;
-display: flex;
-align-items: center;
-gap: 16px;
+color: #C9A84C; font-size: 12px; letter-spacing: 8px; margin-bottom: 12px;
+display: flex; align-items: center; gap: 16px;
 }
 
 .section-label::after {
-content: ‘’;
-flex: 1;
-max-width: 60px;
-height: 1px;
-background: var(–gold);
-opacity: 0.4;
+content: ‘’; flex: 1; max-width: 60px; height: 1px;
+background: #C9A84C; opacity: 0.4;
 }
 
 .section-title {
-font-size: 32px;
-font-weight: 300;
-letter-spacing: 6px;
-color: var(–ink);
-margin-bottom: 48px;
+font-size: 32px; font-weight: 300; letter-spacing: 6px;
+color: #1a1208; margin-bottom: 48px;
 }
 
 /* ===== ROOMS ===== */
-.rooms { background: var(–paper); }
-
+.rooms { background: #f4f0e8; }
 .rooms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
-
 .room-card { position: relative; overflow: hidden; cursor: pointer; }
 
 .room-card img {
@@ -295,29 +240,27 @@ transition: transform 0.6s; filter: brightness(0.65);
 .room-card:hover img { transform: scale(1.04); filter: brightness(0.5); }
 
 .room-info {
-position: absolute; bottom: 0; left: 0; right: 0;
-padding: 32px;
+position: absolute; bottom: 0; left: 0; right: 0; padding: 32px;
 background: linear-gradient(to top, rgba(10,8,4,0.95) 0%, rgba(10,8,4,0.6) 60%, transparent 100%);
 }
 
 .room-type {
-font-size: 10px; letter-spacing: 4px; color: var(–gold);
-margin-bottom: 8px; font-family: ‘Cormorant Garamond’, serif; font-style: italic;
+font-size: 10px; letter-spacing: 4px; color: #C9A84C; margin-bottom: 8px;
+font-family: ‘Cormorant Garamond’, serif; font-style: italic;
 }
 
 .room-name { font-size: 22px; color: #ffffff; letter-spacing: 4px; font-weight: 300; margin-bottom: 8px; }
-.room-price { font-size: 14px; color: var(–gold-light); letter-spacing: 2px; font-weight: 300; }
+.room-price { font-size: 14px; color: #e8d5a0; letter-spacing: 2px; font-weight: 300; }
 
 .room-tag {
 position: absolute; top: 20px; right: 20px;
-background: var(–gold); color: var(–ink);
+background: #C9A84C; color: #1a1208;
 font-size: 10px; letter-spacing: 2px; padding: 4px 14px; font-weight: 700;
 }
 
 /* ===== FOOD ===== */
-.food { background: var(–cream); }
+.food { background: #faf8f4; }
 .food-layout { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
-
 .food-card { position: relative; overflow: hidden; border-radius: 2px; }
 
 .food-card img {
@@ -333,12 +276,11 @@ background: linear-gradient(to top, rgba(10,8,4,0.95), transparent);
 color: #ffffff; font-size: 16px; letter-spacing: 3px; font-weight: 300;
 }
 
-.food-price { font-size: 12px; color: var(–gold); letter-spacing: 2px; margin-top: 6px; }
+.food-price { font-size: 12px; color: #C9A84C; letter-spacing: 2px; margin-top: 6px; }
 
 /* ===== BLOG ===== */
-.blog { background: var(–ink); }
+.blog { background: #1a1208; }
 .blog .section-title { color: #ffffff; }
-
 .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
 .blog-card {
@@ -347,15 +289,11 @@ border: 1px solid rgba(201,168,76,0.25);
 border-radius: 2px; overflow: hidden; transition: border-color 0.3s; cursor: pointer;
 }
 
-.blog-card:hover { border-color: var(–gold); }
-
+.blog-card:hover { border-color: #C9A84C; }
 .blog-img { width: 100%; height: 200px; object-fit: cover; filter: brightness(0.75); }
-
 .blog-body { padding: 24px; }
-
 .blog-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-
-.blog-date { font-size: 11px; color: var(–gold); letter-spacing: 2px; font-family: ‘Cormorant Garamond’, serif; }
+.blog-date { font-size: 11px; color: #C9A84C; letter-spacing: 2px; font-family: ‘Cormorant Garamond’, serif; }
 
 .blog-cat {
 font-size: 9px; letter-spacing: 2px; color: rgba(201,168,76,0.7);
@@ -363,42 +301,37 @@ border: 1px solid rgba(201,168,76,0.3); padding: 2px 10px;
 }
 
 .blog-title { color: #ffffff; font-size: 15px; letter-spacing: 2px; font-weight: 300; line-height: 1.8; margin-bottom: 12px; }
-
 .blog-text { color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.9; font-family: ‘Noto Sans JP’, sans-serif; font-weight: 300; }
 
 /* ===== REVIEWS ===== */
-.reviews { background: var(–paper); }
+.reviews { background: #f4f0e8; }
 .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
 .review-card {
-background: white; border: 1px solid var(–border);
+background: white; border: 1px solid #e0d4b8;
 border-radius: 2px; padding: 28px; cursor: pointer; transition: all 0.3s;
 }
 
-.review-card:hover { border-color: var(–gold); box-shadow: 0 4px 24px rgba(201,168,76,0.15); }
-
-.review-stars { color: var(–gold); font-size: 16px; letter-spacing: 3px; margin-bottom: 14px; }
-
+.review-card:hover { border-color: #C9A84C; box-shadow: 0 4px 24px rgba(201,168,76,0.15); }
+.review-stars { color: #C9A84C; font-size: 16px; letter-spacing: 3px; margin-bottom: 14px; }
 .review-text { font-size: 14px; line-height: 2; color: #333; margin-bottom: 16px; font-weight: 300; }
-
 .review-photos { display: flex; gap: 8px; margin-bottom: 16px; }
-
 .review-photos img { width: 72px; height: 72px; object-fit: cover; border-radius: 2px; }
 
 .review-meta {
 display: flex; align-items: center; justify-content: space-between;
-padding-top: 14px; border-top: 1px solid var(–border);
+padding-top: 14px; border-top: 1px solid #e0d4b8;
 }
 
 .reviewer { font-size: 12px; color: #555; letter-spacing: 2px; }
-.review-date { font-size: 11px; color: var(–gold); letter-spacing: 2px; font-family: ‘Cormorant Garamond’, serif; }
+.review-date { font-size: 11px; color: #C9A84C; letter-spacing: 2px; font-family: ‘Cormorant Garamond’, serif; }
 
 .owner-reply {
-background: rgba(201,168,76,0.07); border-left: 2px solid var(–gold);
+background: rgba(201,168,76,0.07); border-left: 2px solid #C9A84C;
 padding: 12px 16px; margin-top: 14px; border-radius: 0 2px 2px 0;
 }
 
-.owner-reply-label { font-size: 9px; letter-spacing: 3px; color: var(–gold); margin-bottom: 6px; font-family: ‘Cormorant Garamond’, serif; }
+.owner-reply-label { font-size: 9px; letter-spacing: 3px; color: #C9A84C; margin-bottom: 6px; font-family: ‘Cormorant Garamond’, serif; }
 .owner-reply-text { font-size: 13px; color: #555; line-height: 1.8; font-weight: 300; }
 
 /* ===== SMART KEY ===== */
@@ -413,39 +346,34 @@ border-bottom: 1px solid rgba(201,168,76,0.3);
 
 .smartkey-title {
 font-family: ‘Cormorant Garamond’, serif;
-color: var(–gold); font-size: 34px; letter-spacing: 4px; margin-bottom: 20px; font-style: italic;
+color: #C9A84C; font-size: 34px; letter-spacing: 4px; margin-bottom: 20px; font-style: italic;
 }
 
 .smartkey-text { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 2.2; letter-spacing: 1px; font-family: ‘Noto Sans JP’, sans-serif; font-weight: 300; }
 
 /* ===== ACCESS ===== */
-.access { background: var(–cream); }
+.access { background: #faf8f4; }
 .access-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-
 .access-map { width: 100%; height: 320px; position: relative; overflow: hidden; border-radius: 2px; }
 .access-map img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.75) sepia(0.2); }
 .access-map-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(26,18,8,0.25); }
 .map-pin { font-size: 40px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6)); }
-
-.access-item { display: flex; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(–border); }
-.access-label { font-size: 11px; letter-spacing: 3px; color: var(–gold); min-width: 80px; padding-top: 2px; font-family: ‘Cormorant Garamond’, serif; }
+.access-item { display: flex; gap: 24px; padding: 18px 0; border-bottom: 1px solid #e0d4b8; }
+.access-label { font-size: 11px; letter-spacing: 3px; color: #C9A84C; min-width: 80px; padding-top: 2px; font-family: ‘Cormorant Garamond’, serif; }
 .access-value { font-size: 14px; color: #333; line-height: 1.9; letter-spacing: 1px; font-weight: 300; }
 
 /* ===== FOOTER ===== */
-footer { background: var(–ink); padding: 60px 80px 40px; border-top: 2px solid rgba(201,168,76,0.3); }
+footer { background: #1a1208; padding: 60px 80px 40px; border-top: 2px solid rgba(201,168,76,0.3); }
 
 .footer-top {
 display: flex; justify-content: space-between; align-items: flex-start;
 margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(201,168,76,0.15);
 }
 
-.footer-logo { font-family: ‘Cormorant Garamond’, serif; color: var(–gold); font-size: 28px; letter-spacing: 8px; font-weight: 300; margin-bottom: 14px; }
-
+.footer-logo { font-family: ‘Cormorant Garamond’, serif; color: #C9A84C; font-size: 28px; letter-spacing: 8px; font-weight: 300; margin-bottom: 14px; }
 .footer-address { color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing: 2px; line-height: 2.2; font-family: ‘Noto Sans JP’, sans-serif; font-weight: 300; }
-
 .footer-links { display: flex; gap: 48px; }
-
-.footer-col-title { color: var(–gold); font-size: 10px; letter-spacing: 4px; margin-bottom: 18px; font-family: ‘Cormorant Garamond’, serif; }
+.footer-col-title { color: #C9A84C; font-size: 10px; letter-spacing: 4px; margin-bottom: 18px; font-family: ‘Cormorant Garamond’, serif; }
 
 .footer-col a {
 display: block; color: rgba(255,255,255,0.4); font-size: 12px; letter-spacing: 2px;
@@ -453,18 +381,15 @@ text-decoration: none; margin-bottom: 12px; font-family: ‘Noto Sans JP’, san
 font-weight: 300; transition: color 0.3s;
 }
 
-.footer-col a:hover { color: var(–gold); }
-
+.footer-col a:hover { color: #C9A84C; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; }
-
 .copyright { color: rgba(255,255,255,0.2); font-size: 11px; letter-spacing: 2px; font-family: ‘Cormorant Garamond’, serif; }
-
 .powered { color: rgba(201,168,76,0.25); font-size: 10px; letter-spacing: 3px; font-family: ‘Cormorant Garamond’, serif; font-style: italic; }
 
 /* ===== FLOAT ===== */
 .float-reserve {
 position: fixed; bottom: 32px; right: 32px;
-background: var(–gold); color: var(–ink);
+background: #C9A84C; color: #1a1208;
 padding: 16px 36px; font-size: 13px; letter-spacing: 3px; font-weight: 700;
 border-radius: 2px; cursor: pointer;
 box-shadow: 0 8px 32px rgba(201,168,76,0.5); z-index: 99;
@@ -477,7 +402,7 @@ animation: pulse 3s ease-in-out infinite;
 50% { box-shadow: 0 8px 48px rgba(201,168,76,0.8); }
 }
 
-.divider { height: 1px; background: linear-gradient(to right, transparent, var(–gold), transparent); opacity: 0.25; margin: 0 80px; }
+.divider { height: 1px; background: linear-gradient(to right, transparent, #C9A84C, transparent); opacity: 0.25; margin: 0 80px; }
 </style>
 
 </head>
@@ -544,40 +469,43 @@ animation: pulse 3s ease-in-out infinite;
   <div class="section-label">ROOMS</div>
   <h2 class="section-title">お部屋のご案内</h2>
   <div class="rooms-grid">
-    <!-- 雪山の宿・室内 -->
+    <!-- 101号室：山の木造和室風 -->
     <div class="room-card">
-      <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="和室">
+      <img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?w=800&q=80" alt="和室">
       <div class="room-tag">和室</div>
       <div class="room-info">
         <div class="room-type">Japanese Style</div>
         <div class="room-name">101号室</div>
-        <div class="room-price">¥12,000 / 泊〜</div>
+        <div class="room-price">¥4,000 / 名〜（素泊まり）</div>
       </div>
     </div>
+    <!-- 201号室：コージーなロッジ風ベッドルーム -->
     <div class="room-card">
-      <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="洋室">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="洋室">
       <div class="room-tag">洋室</div>
       <div class="room-info">
         <div class="room-type">Western Style</div>
         <div class="room-name">201号室</div>
-        <div class="room-price">¥12,000 / 泊〜</div>
+        <div class="room-price">¥4,000 / 名〜（素泊まり）</div>
       </div>
     </div>
+    <!-- 202号室：シンプルなツインルーム -->
     <div class="room-card">
       <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80" alt="ツイン">
       <div class="room-info">
         <div class="room-type">Standard Twin</div>
         <div class="room-name">202号室</div>
-        <div class="room-price">¥7,500 / 泊〜</div>
+        <div class="room-price">¥4,000 / 名〜（素泊まり）</div>
       </div>
     </div>
+    <!-- 203号室：山の景色が広がる特別室 -->
     <div class="room-card">
-      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="特別室">
-      <div class="room-tag" style="background:var(--warm);color:white;">特別室</div>
+      <img src="https://images.unsplash.com/photo-1586611292717-f828b167408c?w=800&q=80" alt="特別室">
+      <div class="room-tag" style="background:#8B4513;color:white;">特別室</div>
       <div class="room-info">
-        <div class="room-type">Special Suite</div>
-        <div class="room-name">401号室</div>
-        <div class="room-price">¥30,000 / 泊〜</div>
+        <div class="room-type">Special Room</div>
+        <div class="room-name">203号室</div>
+        <div class="room-price">¥4,000 / 名〜（素泊まり）</div>
       </div>
     </div>
   </div>
@@ -611,7 +539,7 @@ animation: pulse 3s ease-in-out infinite;
 <!-- BLOG -->
 
 <section class="blog">
-  <div class="section-label" style="color:var(--gold)">NEWS & BLOG</div>
+  <div class="section-label" style="color:#C9A84C">NEWS & BLOG</div>
   <h2 class="section-title">お知らせ・ブログ</h2>
   <div class="blog-grid">
     <div class="blog-card">
@@ -685,7 +613,7 @@ animation: pulse 3s ease-in-out infinite;
       <div class="review-text">和室が広くて清潔。朝食が絶品でした。子どもも大喜び。</div>
       <div class="review-photos">
         <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=200&q=80" alt="">
-        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=200&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?w=200&q=80" alt="">
         <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=200&q=80" alt="">
       </div>
       <div class="owner-reply">
@@ -721,7 +649,7 @@ animation: pulse 3s ease-in-out infinite;
   <h2 class="section-title">アクセス</h2>
   <div class="access-grid">
     <div class="access-map">
-      <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800&q=80" alt="川場村">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80" alt="川場村の山">
       <div class="access-map-overlay"><div class="map-pin">📍</div></div>
     </div>
     <div>
